@@ -1,18 +1,19 @@
 <?php
 
+require 'Validator.php';
 
 $config = require 'config.php';
 $db = new Database($config['database']);
 
+
+
 if($_SERVER['REQUEST_METHOD']==='POST'){
 
-    $error = [];
-    if(strlen($_POST['body'])===0){
-        $error['body'] = "A body is required";
-    }
 
-    if(strlen($_POST['body'])>10){
-        $error['body'] = "Body cannot be more than 10 characters";
+    $error = [];
+
+    if(!Validator::string($_POST['body'], 1, 10)){
+        $error['body'] = "A body of no more than 10 characters is required";
     }
 
     if(empty($error)){   
@@ -23,4 +24,10 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
     }
 }
 
-require 'views/note-create.view.php';
+
+
+
+
+
+
+require 'views/notes/create.view.php';

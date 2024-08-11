@@ -10,6 +10,6 @@ $note = $db->query('select * from notes where id=:id', [
     
 $current_user = 1;
     
-authorize($note['user_id']=== $current_user);
+authorize($note['user_id'] === $current_user);
 
-require 'views/note.view.php';
+require 'views/notes/show.view.php';

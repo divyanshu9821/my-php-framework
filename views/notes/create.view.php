@@ -1,5 +1,5 @@
-<?php require ('partials/head.php') ?>
-<?php require ('partials/navbar.php') ?>
+<?php require ('views/partials/head.php') ?>
+<?php require ('views/partials/navbar.php') ?>
 
 <main id="main-section">
         <form action="" method="post">
@@ -16,4 +16,4 @@
         </form>
 </main>
 
-<?php require ('partials/footer.php'); ?>
+<?php require ('views/partials/footer.php'); ?>
