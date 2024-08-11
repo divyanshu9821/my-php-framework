@@ -1,5 +1,7 @@
 <?php
 
+$routes = require 'routes.php';
+
 function abort($code = 404)
 {
     http_response_code($code);
@@ -16,13 +18,6 @@ function route_to_controller($url, $routes)
     }
 }
 
-
 $url = parse_url($_SERVER['REQUEST_URI'])['path'];
-
-$routes = [
-    '/' => 'controllers/index.php',
-    '/notes' => 'controllers/notes.php',
-    '/note' => 'controllers/note.php'
-];
 
 route_to_controller($url, $routes);

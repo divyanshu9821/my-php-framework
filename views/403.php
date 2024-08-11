@@ -2,7 +2,7 @@
 <?php require ('partials/navbar.php') ?>
 
 <main id="main-section">
-        <p><?= htmlspecialchars($note['body']) ?></p>
+    You are not authorized!
 </main>
 
-<?php require ('partials/footer.php'); ?>
+<?php require ('partials/footer.php'); ?>   
